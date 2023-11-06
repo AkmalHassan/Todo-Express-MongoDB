@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Todo App</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <h1>Todo App</h1>
+    <form action="/categories" method="POST">
+      <input type="text" name="title" placeholder="New Category" />
+      <button type="submit">Add Category</button>
+    </form>
+    <ul>
+      <% categories.forEach(category => { %>
+      <li>
+        <a href="/tasks/<%= category._id %>"><%= category.title %></a>
+        <form action="/tasks/<%= category._id %>" method="POST">
+          <input type="text" name="title" placeholder="New Task" />
+          <button type="submit">Add Task</button>
+        </form>
+        
+      </li>
+      <% }); %>
+    </ul>
+    <script src="/javascripts/script.js"></script>
+  </body>
+</html>

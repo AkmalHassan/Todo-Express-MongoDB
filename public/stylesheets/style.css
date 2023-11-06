@@ -1,0 +1,111 @@
+/* Reset some basic elements */
+body, h1, h2, form, ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* Apply a background color and some padding to the body */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  line-height: 1.6;
+  padding: 20px 40px;
+}
+
+/* Style for the main heading */
+h1 {
+  color: #333;
+}
+
+/* Style for the form elements */
+form {
+  margin-bottom: 20px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for input fields and buttons */
+input[type="text"],
+button {
+  padding: 10px;
+  margin-right: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box; /* To include padding in the width */
+}
+
+button {
+  background-color: #5cb85c; /* A green color */
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #449d44; /* A darker green on hover */
+}
+
+/* Style for the task list */
+ul {
+  list-style-type: none;
+}
+
+ul li {
+  background: #fff;
+  margin-bottom: 10px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Completed task styling */
+.completed {
+  text-decoration: line-through; /* Cross-out completed tasks */
+  color: #999; /* A lighter color for completed tasks */
+}
+
+/* Styling for links */
+a {
+  color: #00b7ff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Additional classes for delete buttons and completion checkboxes, if needed */
+.delete-task {
+  color: #ff6347; /* A red color for delete buttons */
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.task-complete {
+  margin-right: 10px;
+}
+
+
+/* Style for the checkbox when a task is completed */
+.task-complete:checked + label {
+  text-decoration: line-through;
+  color: #999999;
+}
+
+.delete-task {
+  background-color: #e74c3c; /* red color for delete button */
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  margin-left: 10px; /* add some space between the checkbox and button */
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.delete-task:hover {
+  background-color: #c0392b; /* darker red on hover */
+}
